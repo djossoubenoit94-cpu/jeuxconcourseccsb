@@ -1,0 +1,37 @@
+/* Palette bleu / blanc clair (les noms de variables sont conservés pour ne rien casser) : --iv blanc bleuté, --bo bleu principal, --bo2 bleu nuit, --fo bleu moyen, --go ambre discret */
+:root{--iv:#f4f8fd;--iv2:#dce6f2;--bo:#1d4e89;--bo2:#0f2a4f;--fo:#2b6cb0;--go:#e0a83c;--ink:#14202e;--mut:#5a6b7f;--navh:64px}
+*{box-sizing:border-box}body{margin:0;background:var(--iv);color:var(--ink);font:17px/1.6 Georgia,"Times New Roman",serif}
+h1,h2,h3{font-family:"Palatino Linotype",Palatino,Georgia,serif;line-height:1.15;margin:0 0 .5em}
+a{color:var(--bo)}header.top{position:sticky;top:0;z-index:50;background:var(--bo2);color:var(--iv);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;padding:12px 5vw;border-bottom:3px solid var(--go)}
+
+main{max-width:980px;margin:0 auto;padding:0 5vw 60px}
+.hero{background:linear-gradient(160deg,var(--bo) 0%,var(--bo2) 100%);color:var(--iv);margin:0 -5vw 32px;padding:56px 5vw 48px}
+.hero small{letter-spacing:.25em;text-transform:uppercase;color:var(--go)}.hero h1{font-size:clamp(2rem,6vw,3.6rem);max-width:15ch;margin-top:.3em}
+.hero p{max-width:52ch;opacity:.9}.date{display:inline-block;border:1px solid var(--go);color:var(--go);padding:4px 12px;margin:6px 0 20px;font-variant:small-caps;letter-spacing:.08em}
+.btn{display:inline-block;background:var(--go);color:var(--bo2);border:0;padding:11px 22px;font:inherit;font-weight:bold;cursor:pointer;text-decoration:none;margin:4px 8px 4px 0}
+.btn.alt{background:transparent;color:inherit;border:1px solid currentColor}.btn.fo{background:var(--fo);color:var(--iv)}.btn:disabled{opacity:.4}
+section.band{padding:26px 0;border-top:1px solid var(--iv2)}.band.dark{background:var(--fo);color:var(--iv);margin:0 -5vw;padding:30px 5vw;border:0}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}.cell{border-left:3px solid var(--go);padding:4px 0 4px 14px}.cell b{font-size:1.9rem;color:var(--bo);display:block}.dark .cell b{color:var(--go)}
+.cat{display:flex;justify-content:space-between;gap:8px;align-items:center;padding:10px 0;border-bottom:1px solid var(--iv2)}.cat span{color:var(--mut);font-size:.9rem}
+.card{background:#ffffff;border:1px solid var(--iv2);padding:22px;margin:16px 0}.q{font-size:1.3rem;font-family:Palatino,Georgia,serif}
+.opt{display:block;width:100%;text-align:left;background:#fff;border:1px solid #c3d2e6;padding:12px 14px;margin:8px 0;font:inherit;cursor:pointer}.opt:hover:not(:disabled){border-color:var(--bo)}
+.opt.ok{background:#dcebdd;border-color:#2f855a}.opt.ko{background:#f6dcd8;border-color:#b3402e}
+input[type=text],input,select,textarea{font:inherit;padding:10px;border:1px solid #c3d2e6;background:#fff;width:100%;max-width:100%}
+.bar{height:6px;background:var(--iv2)}.bar i{display:block;height:100%;background:var(--bo)}.timer{height:5px;background:var(--iv2);margin:6px 0}.timer i{display:block;height:100%;background:var(--go)}
+.fb{border-left:4px solid var(--fo);padding:8px 14px;margin-top:14px;background:var(--iv)}.fb.ko{border-color:#b3402e}.meta{color:var(--mut);font-size:.88rem}
+.tag{font-size:.72rem;border:1px solid var(--go);padding:1px 6px;margin-right:6px;color:var(--bo);text-transform:uppercase;letter-spacing:.05em}
+.flip{cursor:pointer;min-height:130px;display:flex;flex-direction:column;justify-content:center}.row{display:flex;flex-wrap:wrap;gap:12px;align-items:end}.row>*{flex:1 1 180px}
+@media(max-width:600px){body{font-size:16px}}
+
+.pg>.band:first-child{border-top:0}
+.hero{margin-top:0}.hero h1{color:#fff}
+
+/* Menu ☰ */
+.brand{color:var(--iv);text-decoration:none;font-weight:bold;letter-spacing:.12em;text-transform:uppercase;font-size:.85rem}
+.burger{display:flex;align-items:center;gap:8px;background:transparent;color:var(--iv);border:1px solid var(--go);padding:7px 14px;font:inherit;cursor:pointer}
+.burger .ic{font-size:1.45rem;line-height:1;color:var(--go)}.burger:hover,.burger:focus-visible{background:var(--bo)}
+#menuPanel{position:absolute;top:100%;right:0;width:min(320px,100%);display:flex;flex-direction:column;background:var(--bo2);border-top:1px solid var(--go);box-shadow:0 14px 28px rgba(0,0,0,.28)}
+#menuPanel[hidden]{display:none}
+#menuPanel a{color:var(--iv);text-decoration:none;padding:15px 5vw;border-bottom:1px solid rgba(255,255,255,.12);border-left:4px solid transparent}
+#menuPanel a:hover{background:var(--bo)}#menuPanel a[aria-current]{border-left-color:var(--go);font-weight:bold}
+@media(max-width:600px){#menuPanel{width:100%}}
